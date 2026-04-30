@@ -1,0 +1,202 @@
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-light) 100%);
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 10% 80%, rgba(201,162,39,0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(255,255,255,0.05) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.hero-badge {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.3rem;
+  color: var(--secondary);
+  direction: rtl;
+  background: rgba(201,162,39,0.12);
+  border: 1px solid rgba(201,162,39,0.3);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  letter-spacing: 0.02em;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  color: white;
+  line-height: 1.2;
+  max-width: 600px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-verse {
+  margin-top: 1rem;
+  padding: 1.25rem 2rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+.hero-verse .arabic {
+  color: var(--secondary-light);
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.verse-trans {
+  color: rgba(255,255,255,0.7);
+  font-style: italic;
+  font-size: 0.92rem;
+}
+
+/* Features */
+.features-section {
+  padding: 3rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.feature-icon {
+  font-size: 2.2rem;
+}
+
+.feature-arabic {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.6rem;
+  direction: rtl;
+  line-height: 1.4;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  color: var(--text);
+}
+
+.feature-desc {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.feature-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* About */
+.about-section {
+  padding: 3rem 0 2rem;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-text p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.geo-pattern {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+  border: 3px solid var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: radial-gradient(circle, rgba(201,162,39,0.08) 0%, transparent 70%);
+  box-shadow: 0 0 0 12px rgba(201,162,39,0.06), 0 0 0 24px rgba(201,162,39,0.03);
+}
+
+.geo-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(201,162,39,0.4);
+  border-radius: 50%;
+}
+
+.geo-inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.geo-text {
+  color: var(--primary);
+  font-size: 2.4rem;
+}
+
+.geo-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .about-inner {
+    grid-template-columns: 1fr;
+  }
+  .geo-pattern {
+    display: none;
+  }
+}

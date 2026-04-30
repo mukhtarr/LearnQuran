@@ -1,0 +1,188 @@
+.tajweed-page {
+  background: var(--bg);
+}
+
+.color-legend {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.legend-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 0.2rem 0.6rem;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.rule-card {
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.rule-card.rule-selected {
+  border-color: var(--rule-color);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  grid-column: span 2;
+}
+
+@media (max-width: 680px) {
+  .rule-card.rule-selected {
+    grid-column: span 1;
+  }
+}
+
+.rule-card-top {
+  display: flex;
+  align-items: stretch;
+  min-height: 90px;
+}
+
+.rule-color-bar {
+  width: 6px;
+  flex-shrink: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.rule-card-content {
+  padding: 1.1rem 1.25rem;
+  flex: 1;
+}
+
+.rule-arabic {
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.rule-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 0.1rem;
+}
+
+.rule-duration {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+.rule-teaser {
+  color: var(--text-light);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  padding: 0 1.25rem 1.1rem 1.6rem;
+}
+
+.rule-detail {
+  padding: 0 1.5rem 1.5rem 1.6rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.rule-divider {
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.rule-desc {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.rule-letters {
+  margin-bottom: 1.25rem;
+}
+
+.rule-letters-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.letters-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.letter-badge {
+  border: 1.5px solid;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.1rem;
+  background: rgba(255,255,255,0.5);
+}
+
+.rule-example {
+  background: rgba(0,0,0,0.02);
+  border: 1.5px solid;
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.example-arabic-colored {
+  font-family: 'Times New Roman', serif;
+  direction: rtl;
+  font-size: 2rem;
+  line-height: 2;
+  margin: 0.5rem 0;
+}
+
+.highlight-note {
+  font-size: 0.82rem;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+.tajweed-footer {
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(201, 162, 39, 0.08);
+  border-left: 4px solid var(--secondary);
+  border-radius: 0 8px 8px 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
