@@ -1,16 +1,30 @@
-# React + Vite
+# LearnQuran — Quranic Grammar & Tajweed
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A structured, beautiful web application for learning Quranic Arabic grammar and Tajweed recitation rules, grounded in authentic Quranic verses.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Grammar** — 8 expandable concept cards covering Ism, Fi'l, Harf, grammatical cases (Marfu', Mansub, Majrur), and definiteness (Ma'rifa, Nakira) with Quranic examples
+- **Tajweed** — 6 color-coded recitation rule cards (Ghunna, Ikhfa, Idgham, Iqlab, Qalqala, Madd) with letter lists and highlighted Quranic examples
+- **Practice** — 10-question interactive quiz covering both grammar and Tajweed, with progress tracking, answer feedback, explanations, and a results screen
+- Responsive design with Islamic-themed color palette (deep green, gold, cream)
+- Arabic text with RTL rendering
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://react.dev/) + [Vite](https://vite.dev/)
+- [React Router](https://reactrouter.com/) for client-side navigation
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
